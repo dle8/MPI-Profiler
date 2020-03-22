@@ -1,0 +1,3 @@
+/Users/dungle/Desktop/MPI-Profiler/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/dungle/Desktop/MPI-Profiler/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/dungle/Desktop/MPI-Profiler/cmake-build-debug/CMakeFiles/simple_example.dir
