@@ -8,11 +8,12 @@ void PROFILE_START(int);
 void PROFILE_STOP(int);
 void PROFILE_FINISH();
 
+#include "chrono.cpp"
 typedef struct {
-    double entry_time;
+    hrc entry_time;
     double total_time;
     long int count;
-    int flag = 0; // if flag then print elapsed time.
+    int flag; // if flag then print elapsed time.
 } mpi_performance;
 
 #endif
