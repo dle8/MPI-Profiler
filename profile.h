@@ -9,8 +9,10 @@ void PROFILE_STOP(int);
 void PROFILE_FINISH();
 
 #include "chrono.cpp"
+
+
 typedef struct {
-    hrc entry_time;
+    chrono::hrc_time entry_time;
     double total_time;
     long int count;
     int flag; // if flag then print elapsed time.

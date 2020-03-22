@@ -2,11 +2,11 @@
 
 #include "chrono.cpp"
 
-hrc_time current_time(void) {
+chrono::hrc_time current_time(void) {
     return high_resolution_clock::now();
 }
 
-hrc_time start[64];
+chrono::hrc_time start[64];
 double elapsed[64];
 
 inline void _timer_clear(int n) {
@@ -18,10 +18,9 @@ inline void _timer_start(int n) {
 }
 
 inline void _timer_stop(int n) {
-    hrc_time now;
+    chrono::hrc_time now;
     now = current_time();
-    duration<double> elapsed_time = now - start[n];
-    elapsed[n] += elapsed_time.count();
+    elapsed[n] += elapsed_time(start[n], now);
 }
 
 inline double _timer_read(int n) {
