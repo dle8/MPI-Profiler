@@ -1,11 +1,3 @@
-/********************************************************************
-*                                                                   *
-* This library can be used to acquire communication and computation *
-* profile for a given MPI program. Written by Jidong Zhai.          *
-* July.12.2012. Contact: zhaijidong@gmail.com                       *
-*                                                                   *
-********************************************************************/
-
 #include <mpi.h>
 #include "profile.h"
 
