@@ -1,12 +1,9 @@
 #ifndef TIMER_H
 #define TIMER_H
 
-#include "chrono.cpp"
-chrono::hrc_time current_time(void);
-
-void _timer_clear(int n);
-void _timer_start(int n);
-void _timer_stop(int n);
-double _timer_read(int n);
+void timer_clear(int n);
+void timer_start(int n);
+void timer_stop(int n);
+double timer_read(int n);
 
 #endif

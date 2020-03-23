@@ -6,12 +6,7 @@
 *                                                                   *
 ********************************************************************/
 
-#include <stdio.h>
 #include <mpi.h>
-//#include "mpi.h"
-#include <stdlib.h>
-#include <string.h>
-
 #include "profile.h"
 
 /******************************************************************
@@ -39,21 +34,15 @@ int MPI_Init(int *argc, char ***argv) {
 
 #ifdef PERF_PROFILE
     PMPI_Comm_rank( MPI_COMM_WORLD, &proc_id );
-      PROFILE_INIT(proc_id);
-      //PROFILE_STOP(0);
+    PROFILE_INIT(proc_id);
+    //PROFILE_STOP(0);
 #endif
 
-    return
-            returnVal;
+    return returnVal;
 }
 
 #ifdef PERF_MPI_THREADED
-int  MPI_Init_thread (argc, argv, required, provided )
-int * argc;
-char *** argv;
-int required;
-int *provided;
-{
+int  MPI_Init_thread (int * argc, char *** argv, int required, int *provided ) {
   int  returnVal;
 
 #ifdef PERF_PROFILE
@@ -72,6 +61,7 @@ int *provided;
 
   return returnVal;
 }
+
 #endif /* PERF_MPI_THREADED */
 
 
