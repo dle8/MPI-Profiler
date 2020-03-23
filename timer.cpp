@@ -1,6 +1,6 @@
 // Chorno library for high-resolution timer
 
-#include "chrono.cpp"
+#include "chrono_timer.cpp"
 
 chrono_timer::hrc_time start[64];
 double elapsed[64];

@@ -5,7 +5,6 @@
 
 #define SIZE 4
 using namespace std;
-using namespace chrono_timer;
 
 int main(int argc, char *argv[]) {
     int numtasks, rank, sendcount, recvcount, source;

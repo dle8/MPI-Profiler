@@ -1,5 +1,4 @@
-#include <mpi.h>
-#include "profile.h"
+#include "profile.cpp"
 
 /******************************************************************
 *                                                                 *
