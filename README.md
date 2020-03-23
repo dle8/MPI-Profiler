@@ -1,5 +1,5 @@
 # MPI-Profiler
-A fine-grain profiler for MPI programs that measures CPU time and MPI time in nanoseconds for each process using 
+A fine-grain profiler for parallel MPI programs that measures CPU time and MPI time in nanoseconds for each process using 
 high-resolution timer from Chrono library.
 
 # Run command
