@@ -16,7 +16,7 @@ profile.o : profile.cpp
 	$(CPP) $(FLAGS) $(DEF) -c profile.cpp
 
 clean :
-	rm -f *.o	rm -f mpi_timer.a	rm -f run
+	rm -f *.o	rm -f run
 
 clean_record:
 	rm -f mpi_record.*
