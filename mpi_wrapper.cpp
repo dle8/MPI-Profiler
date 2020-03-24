@@ -1,3 +1,6 @@
+//#define PERF_PROFILE
+
+#include "mpi.h"
 #include "profile.cpp"
 
 /******************************************************************
