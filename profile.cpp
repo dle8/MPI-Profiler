@@ -12,9 +12,15 @@ int threshold;
 
 void sort_mpi(mpi_performance **_mpi_sort);
 
+void sort_mpi(mpi_performance **_mpi_sort) {
+    std::sort(_mpi_sort, _mpi_sort + MPI_ROUTINES, [](const mpi_performance *mp1, mpi_performance *mp2) {
+        return mp1->total_time < mp2->total_time;
+    });
+}
+
 void PROFILE_INIT(int process_id) {
-    char profile_name[100];
-    for (int i = 0; i < 64; ++i) timer_clear(i);
+    char profile_name[64];
+    for (int i = 0; i < MPI_ROUTINES; ++i) timer_clear(i);
     timer_clear(0);
     for (int i = 0; i < MPI_ROUTINES; ++i) {
         mpi_profile[i].total_time = 0.0;
@@ -84,16 +90,4 @@ void PROFILE_FINISH() {
         }
     }
     fclose(profile_file);
-}
-
-void sort_mpi(mpi_performance **_mpi_sort) {
-    std::sort(_mpi_sort, _mpi_sort + MPI_ROUTINES, [](const mpi_performance *mp1, mpi_performance *mp2) {
-        return mp1->total_time < mp2->total_time;
-    });
-
-//    sort(mMyClassVector.begin(), mMyClassVector.end(),
-//         [](const MyClass & a, const MyClass & b) -> bool
-//         {
-//             return a.mProperty > b.mProperty;
-//         });
 }
