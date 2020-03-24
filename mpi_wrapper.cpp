@@ -1,13 +1,5 @@
-//#define PERF_PROFILE
-
 #include "mpi.h"
 #include "profile.cpp"
-
-/******************************************************************
-*                                                                 *
-*                   MPI Functions for Management                  *
-*                                                                 *
-******************************************************************/
 
 int MPI_Init(int *argc, char ***argv) {
     int returnVal;
