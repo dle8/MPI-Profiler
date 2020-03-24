@@ -5,6 +5,9 @@ DEF= -DPERF_PROFILE
 AR = ar
 ARTAG = rvs
 
+run : mpi_timer.a
+	$(CPP) $(SRC) mpi_timer.a -o run && mpirun ./run -np $(NP)
+
 mpi_timer : mpi_wrapper.o profile.o
 	$(AR) $(ARTAG) mpi_timer.a mpi_wrapper.o profile.o
 	$(RM) -f *.o
@@ -18,5 +21,5 @@ profile.o : profile.cpp
 clean :
 	rm -f *.o	rm -f run
 
-clean_record:
-	rm -f mpi_record.*
+clean_all:
+	rm -f mpi_record.*	rm -f *.o	rm -f run	rm -f mpi_timer.a
