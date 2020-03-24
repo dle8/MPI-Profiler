@@ -1,7 +1,5 @@
 #include "mpi.h"
 #include <bits/stdc++.h>
-#define PERF_PROFILE
-#include "mpi_wrapper.cpp"
 
 #define SIZE 4
 using namespace std;
