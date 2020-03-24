@@ -70,7 +70,7 @@ void PROFILE_FINISH() {
     );
     fprintf(profile_file, "Caution: MPI_Init and MPI_Finalize are not included.\n");
 
-    fprintf(profile_file, "%25s%12s%10s\n", "--------Function--------", "--Time(s)--", "--Count--");
+    fprintf(profile_file, "%25s%12s%10s\n", "--------Function--------", "--Time(ms)--", "--Count--");
 
     mpi_performance *mpi_sort[MPI_ROUTINES];
     for (int i = 0; i < MPI_ROUTINES; ++i) mpi_sort[i] = &mpi_profile[i];
