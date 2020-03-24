@@ -5,6 +5,8 @@ DEF= -DPERF_PROFILE
 AR = ar
 ARTAG = rvs
 
+all: mpi_timer run
+
 run : mpi_timer.a
 	$(CPP) $(SRC) mpi_timer.a -o run && mpirun ./run -np $(NP)
 
