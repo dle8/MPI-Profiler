@@ -33,7 +33,7 @@ better visualization.
 
 - To compile and get the static library ```mpi_timer.a```, run ```make```
 - To profile your program, compile & run it together with the generated ```.a``` file and supply number of threads:
-    - For example, to profile ```mpi_test.cpp``` running with 4 tasks (processes): ```mpic++ mpi_timer.a your_program_name.cpp -o run && mpirun ./run -np 4```
+    - For example, to profile ```mpi_test.cpp``` running with 4 tasks (processes): ```mpic++ mpi_timer.a mpi_test.cpp -o run && mpirun ./run -np 4```
 - After compile & run, each timing result for each process p will be in ```mpi_record.p``` file
 - To clean object files, run ```make clean```
 - To clean processes' records, run ```make clean_record```
