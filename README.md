@@ -28,6 +28,7 @@ better visualization.
     - For Windows users, you should start by installing MinGW Package Installer
     - For Mac users, XCode has already (most of the time) had g++ pre-installed to you
     - For Ubuntu users, you can download [Homebrew](https://brew.sh/) and use the following command ```brew install gcc``` 
+- MPICC/C++ is included with GNU package.
 
 ## 📋 Usage
 
